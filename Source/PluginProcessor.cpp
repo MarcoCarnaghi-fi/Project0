@@ -166,7 +166,7 @@ void Project0AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         for( int channel=0; channel<buffer.getNumChannels();++channel){
         
             if (shouldPlaySound){
-                buffer.setSample(channel,i,r.nextFloat());
+                buffer.setSample(channel,i,r.nextFloat()); //noise generator
             }
             else {
                 buffer.setSample(channel,i,0);
